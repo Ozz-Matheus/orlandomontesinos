@@ -1,33 +1,188 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<title>Orlando Montesinos Quintana | 404</title>
-	<style>
-		/* Color principal */ 
-		:root{--main: #444; --button: #000; } 
-		/* Color principal */ 
-		/* Reset */ 
-		h1,h2,h3,h4,h5,h6,p{font-size: 100%; font-weight: inherit; margin: 0; } 
-		/* Reset */
-		/* Section */ 
-		#section-error{ padding-top: 25px; } #section-error h1{margin:0; font-size:150px; line-height:150px; font-weight:bold; } #section-error h2{margin-top:20px; font-size: 24px; line-height: 34px; font-weight: bold; } #section-error h3{margin-top:50px; font-size: 30px; line-height: 37px; } 
-		/* Section */ 
-		/* Info */ 
-		.info{color: var(--main); padding-top: 15px; display: flex; flex-direction: column; justify-content: center; align-items: center; height: calc(80vh - 120px); font: normal 14px/20px Arial, Helvetica, sans-serif; letter-spacing: 0.2em; text-align: center; } .info .box-button{ margin: 50px; } .info .button{color: var(--button); border: 1px solid var(--button); background: var(--button); margin-top: 50px; padding: 10px 50px; text-decoration: none; cursor: pointer; } .info .button:before { background: white; } .info .button:hover, .info .button:focus, .info .button:active { color: white; } /* Info */ 
-		/* Button */
-		 .hvr-shutter-in-horizontal{display: inline-block; vertical-align: middle; -webkit-transform: translateZ(0); transform: translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); -webkit-backface-visibility: hidden; backface-visibility: hidden; -moz-osx-font-smoothing: grayscale; position: relative; -webkit-transition-property: color; transition-property: color; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; } .hvr-shutter-in-horizontal:before {content: ""; position: absolute; z-index: -1; top: 0; bottom: 0; left: 0; right: 0; background: white; -webkit-transform: scaleX(1); transform: scaleX(1); -webkit-transform-origin: 50%; transform-origin: 50%; -webkit-transition-property: transform; transition-property: transform; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -webkit-transition-timing-function: ease-out; transition-timing-function: ease-out; } .hvr-shutter-in-horizontal:hover:before, .hvr-shutter-in-horizontal:focus:before, .hvr-shutter-in-horizontal:active:before {-webkit-transform: scaleX(0); transform: scaleX(0); } 
-		 /* Button */
-	</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página no encontrada (404) | Orlando Montesinos Quintana</title>
+    <meta name="description" content="La página que estás buscando no existe o ha sido movida.">
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --white:      #ffffff;
+            --off-white:  #f5f5f5;
+            --light-grey: #e8e8e8;
+            --mid-grey:   #9a9a9a;
+            --dark-grey:  #3a3a3a;
+            --black:      #111111;
+            --red:        #c8102e;
+            --red-dark:   #a00c24;
+            --red-subtle: rgba(200,16,46,0.07);
+            --font-sans:  'Inter', system-ui, -apple-system, sans-serif;
+            --font-mono:  'JetBrains Mono', monospace;
+            --container-w: 960px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; }
+
+        body {
+            background: var(--white);
+            color: var(--black);
+            font-family: var(--font-sans);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a { color: var(--red); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--red-dark); }
+
+        .container { max-width: var(--container-w); margin: 0 auto; padding: 0 1.5rem; width: 100%; }
+
+        /* HEADER */
+        header {
+            position: sticky; top: 0; z-index: 50;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--light-grey);
+        }
+
+        .nav-wrap { display: flex; justify-content: space-between; align-items: center; height: 4rem; }
+        .logo { font-family: var(--font-mono); font-weight: 700; color: var(--black); font-size: 1.05rem; }
+        .logo span { color: var(--red); }
+
+        /* ERROR MAIN SECTION */
+        .error-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .error-content {
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        .error-badge {
+            display: inline-block;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            background: var(--red-subtle);
+            color: var(--red);
+            padding: 0.35rem 0.85rem;
+            border-radius: 2px;
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(200,16,46,0.15);
+        }
+
+        .error-code {
+            font-family: var(--font-mono);
+            font-size: 5rem;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -0.05em;
+            color: var(--black);
+            margin-bottom: 0.5rem;
+        }
+        .error-code span { color: var(--red); }
+
+        .error-title {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .error-desc {
+            color: var(--dark-grey);
+            font-size: 1rem;
+            line-height: 1.65;
+            margin-bottom: 2.25rem;
+        }
+
+        /* BUTTONS */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.7rem 1.35rem; border-radius: 4px;
+            font-weight: 600; font-size: 0.9rem;
+            transition: all 0.18s ease; cursor: pointer;
+        }
+
+        .btn-primary { background: var(--red); color: #fff; border: 1px solid var(--red); }
+        .btn-primary:hover { background: var(--red-dark); border-color: var(--red-dark); color: #fff; transform: translateY(-1px); }
+
+        .btn-outline { border: 1px solid var(--light-grey); color: var(--dark-grey); background: var(--white); }
+        .btn-outline:hover { border-color: var(--dark-grey); color: var(--black); transform: translateY(-1px); }
+
+        /* FOOTER */
+        footer {
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--mid-grey);
+            border-top: 1px solid var(--light-grey);
+        }
+    </style>
 </head>
 <body>
-	<div id="section-error">
-		<div class="info">
-			<h1>404</h1>
-			<h2>Website Orlando Montesinos Quintana</h2>
-			<h3>Página no encontrada</h3>
-			<a class="button hvr-shutter-in-horizontal" href="./">Regresar al Inicio</a>
-		</div>
-	</div>	
+
+    <!-- NAVEGACIÓN -->
+    <header>
+        <div class="container nav-wrap">
+            <a href="/" class="logo">OM<span>.</span>dev</a>
+        </div>
+    </header>
+
+    <!-- CONTENIDO 404 -->
+    <main class="error-section">
+        <div class="container">
+            <div class="error-content">
+                <span class="error-badge">ERROR HTTP 404</span>
+                <div class="error-code">404<span>.</span></div>
+                <h1 class="error-title">Página no encontrada</h1>
+                <p class="error-desc">
+                    El recurso que estás intentando consultar no existe, ha sido movido de ruta o la dirección escrita es incorrecta.
+                </p>
+                <div class="btn-group">
+                    <a href="/" class="btn btn-primary">
+                        Volver al inicio
+                    </a>
+                    <a href="https://wa.me/5218126146323?text=Hola%20Orlando,%20encontr%C3%A9%20un%20enlace%20roto%20en%20tu%20sitio%20web" target="_blank" rel="noopener" class="btn btn-outline">
+                        Reportar un problema
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Orlando Montesinos Quintana &mdash; Código limpio, sin dependencias innecesarias.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
